@@ -11,7 +11,7 @@
     <groupId>com.hubspot</groupId>
     <artifactId>Mason</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>Mason</name>
     <description>Builder pattern</description>
     <url>https://github.com/HubSpot/Mason</url>
@@ -32,7 +32,8 @@
         <connection>scm:git:git@github.com:HubSpot/Mason.git</connection>
         <developerConnection>scm:git:git@github.com:HubSpot/Mason.git</developerConnection>
         <url>git@github.com:HubSpot/Mason.git</url>
-    </scm>
+      <tag>Mason-1.0.0</tag>
+  </scm>
 
     <developers>
         <developer>

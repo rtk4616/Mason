@@ -1,4 +1,4 @@
-# Mason
+# Mason [![Build Status](https://travis-ci.org/HubSpot/Mason.svg)](https://travis-ci.org/HubSpot/Mason)
 
 **Less painful Java builders!**
 

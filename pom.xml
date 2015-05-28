@@ -3,37 +3,21 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.basepom</groupId>
-        <artifactId>basepom-standard-oss</artifactId>
-        <version>6</version>
+        <groupId>com.hubspot</groupId>
+        <artifactId>basepom</artifactId>
+        <version>10.2</version>
     </parent>
 
-    <groupId>com.hubspot</groupId>
     <artifactId>Mason</artifactId>
-    <packaging>jar</packaging>
     <version>1.0.1-SNAPSHOT</version>
-    <name>Mason</name>
     <description>Builder pattern</description>
     <url>https://github.com/HubSpot/Mason</url>
-
-    <properties>
-        <basepom.check.skip-license>true</basepom.check.skip-license>
-    </properties>
-
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
 
     <scm>
         <connection>scm:git:git@github.com:HubSpot/Mason.git</connection>
         <developerConnection>scm:git:git@github.com:HubSpot/Mason.git</developerConnection>
         <url>git@github.com:HubSpot/Mason.git</url>
-      <tag>HEAD</tag>
-  </scm>
+    </scm>
 
     <developers>
         <developer>
@@ -69,46 +53,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <profiles>
-        <profile>
-            <id>travis</id>
-            <activation>
-                <property>
-                    <name>env.TRAVIS</name>
-                </property>
-            </activation>
-            <properties>
-                <project.jdk7.home>${env.JAVA_HOME}</project.jdk7.home>
-                <basepom.test.reuse-vm>false</basepom.test.reuse-vm>
-                <basepom.test.fork-count>1</basepom.test.fork-count>
-            </properties>
-        </profile>
-        <profile>
-            <id>cross-compile</id>
-            <activation>
-                <jdk>(1.7,]</jdk>
-            </activation>
-            <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <artifactId>maven-compiler-plugin</artifactId>
-                            <configuration>
-                                <compilerArguments children.combine="append">
-                                    <bootclasspath>${project.jdk7.home}/jre/lib/rt.jar:${project.jdk7.home}/jre/lib/jce.jar:${project.jdk7.home}/../classes/classes.jar</bootclasspath>
-                                </compilerArguments>
-                            </configuration>
-                        </plugin>
-                        <plugin>
-                            <artifactId>maven-javadoc-plugin</artifactId>
-                            <configuration>
-                                <bootclasspath>${project.jdk7.home}/jre/lib/rt.jar:${project.jdk7.home}/jre/lib/jce.jar:${project.jdk7.home}/../classes/classes.jar</bootclasspath>
-                            </configuration>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
-            </build>
-        </profile>
-    </profiles>
 </project>

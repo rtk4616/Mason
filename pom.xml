@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.hubspot</groupId>
         <artifactId>basepom</artifactId>
-        <version>10.2</version>
+        <version>10.3</version>
     </parent>
 
     <artifactId>Mason</artifactId>
@@ -29,6 +29,10 @@
             <email>tpetr@hubspot.com</email>
         </developer>
     </developers>
+
+    <properties>
+        <basepom.git-id.skip>true</basepom.git-id.skip>
+    </properties>
 
     <dependencies>
         <dependency>
